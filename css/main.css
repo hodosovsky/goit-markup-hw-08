@@ -564,6 +564,7 @@ img {
 }
 
 .features-list {
+  justify-content: center;
   gap: 30px;
 }
 .features-list__item {
@@ -592,6 +593,17 @@ img {
   color: var(--title-color);
   font-size: 14px;
   text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .features-list__title {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features-list__title {
+    text-align: left;
+  }
 }
 .features-list__text {
   margin-top: 0;
@@ -639,6 +651,7 @@ img {
 }
 .team-list {
   gap: 30px;
+  justify-content: center;
 }
 .team-list__item {
   text-align: center;
