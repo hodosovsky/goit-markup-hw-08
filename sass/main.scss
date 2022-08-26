@@ -1,0 +1,20 @@
+@import './utils/variables';
+@import './utils/placeholders';
+@import './components/global';
+@import './components/container';
+@import './components/header';
+@import './components/button';
+@import './components/social-network-icons';
+@import './components/section-modal';
+@import './components/./section-hero';
+@import './components/./section-features';
+@import './components/section-projects';
+@import './components/section-team';
+@import './components/section-clients';
+@import './components/footer';
+@import './components/section-porfolio';
+
+// body {
+//   @extend %list;
+//   color: teal;
+// }

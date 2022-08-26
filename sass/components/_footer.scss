@@ -1,0 +1,136 @@
+.footer {
+  background-color: var(--hero-bcg);
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &-flex {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__logo {
+    @extend %link;
+    @extend %logo;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 156px;
+  }
+
+  &__studio {
+    color: var(--studio-footer);
+  }
+}
+
+.adress-list {
+  @extend %list;
+  margin-right: 70px;
+  width: 231px;
+
+  &__item + &__item {
+    margin-top: 9px;
+  }
+
+  &__link {
+    @extend %link;
+    display: inline-block;
+    font-style: normal;
+    line-height: 1.7;
+    color: var(--contacts-text-color);
+    transition: color 250ms var(--default-transition);
+
+    &:hover,
+    &:focus {
+      color: var(--hover-color);
+    }
+  }
+  &__adress {
+    color: var(--adress-text-color);
+  }
+}
+
+.social-network__link--footer {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--button-text-color);
+  fill: var(--button-text-color);
+}
+
+.join {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--hero-title);
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.subscribe {
+  flex-grow: 2;
+  margin-left: 93px;
+
+  .subsctibe__wrap {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--hero-title);
+    margin-top: 12px;
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    width: 358px;
+    height: 50px;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    outline: none;
+    background-color: var(--hero-bcg);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+  }
+
+  &__input::-webkit-input-placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__button {
+    @extend .button;
+    position: relative;
+    width: 200px;
+    margin-left: 12px;
+    padding-left: 28px;
+    text-align: left;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  &__button::after {
+    position: absolute;
+    content: '';
+    right: 28px;
+    bottom: 13px;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    background-image: url('../images/send.svg');
+  }
+}

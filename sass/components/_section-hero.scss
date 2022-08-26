@@ -1,0 +1,52 @@
+.hero {
+  text-align: center;
+  background-color: var(--hero-bcg);
+}
+.hero__background {
+  min-width: 480px;
+  width: 100%;
+  max-width: 768px;
+  height: 400px;
+
+  margin: 0 auto;
+  padding: 118px 0;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/bcg.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 768px) {
+    min-width: 768px;
+    max-width: 1200px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 1200px;
+    max-width: 1600px;
+    height: 600px;
+    padding: 200px 0;
+  }
+}
+
+.hero__title {
+  max-width: 360px;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: (42 / 26);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  color: var(--hero-title);
+  /* outline: 2px solid orange; */
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: calc(60 / 46);
+    max-width: 696px;
+  }
+}

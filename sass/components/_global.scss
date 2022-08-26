@@ -1,0 +1,61 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--main-text-color);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  background-color: var(--main-bcg-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  @extend %list;
+}
+
+// змінюється
+.title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: var(--title-color);
+  font-size: 28px;
+  line-height: calc(33 / 28);
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: calc(42 / 36);
+  }
+}
+
+// змінюється
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}

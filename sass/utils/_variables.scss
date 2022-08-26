@@ -1,0 +1,46 @@
+:root {
+  /* основний колір фона */
+  --main-bcg-color: #ffffff;
+  /* основний колір тексту */
+  --main-text-color: #757575;
+  /* Колір тексту заголовків */
+  --title-color: #212121;
+  /* колір основного заголовка */
+  --hero-title: #ffffff;
+  /* колір логотипа Web */
+  --logo-web-color: #2196f3;
+  /* колір studio в хедері */
+  --studio-header: #000000;
+  /* колір studio в футері */
+  --studio-footer: #ffffff;
+  /* колір тексту в кнопкі */
+  --button-text-color: #ffffff;
+  /* колір тексту адреси в футері */
+  --adress-text-color: #ffffff;
+  /* колір контактів в футері */
+  --contacts-text-color: rgba(255, 255, 255, 0.6);
+  /* колір фона секції героя і футер */
+  --hero-bcg: #2f303a;
+  /* колір фона іконок секції особливості */
+  --features-bcg: #f5f4fa;
+  /* колір фона заголовків чим ми займаємось */
+  --progects-title-bgc-color: rgba(47, 48, 58, 0.8);
+  /* колір секції наша команда */
+  --team-bcg: #f5f4fa;
+  /* колір ховера */
+  --hover-color: #2196f3;
+  /* фон кнопки */
+  --button-bcg: #2196f3;
+  /* колір фона ховера кнопки */
+  --button-hover: #188ce8;
+  /* Бордер хедера */
+  --border-color: #ececec;
+  /* бордер карточки портфоліо */
+  --card-border: #eeeeee;
+  /* колір іконок секції наша команда */
+  --social-network-color: #afb1b8;
+  /* колір іконок */
+  --icons-color: #afb1b8;
+  /* default transition */
+  --default-transition: cubic-bezier(0.4, 0, 0.2, 1);
+}

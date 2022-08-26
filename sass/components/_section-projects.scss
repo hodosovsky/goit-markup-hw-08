@@ -1,0 +1,40 @@
+.projects {
+  padding-top: 0;
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+
+  // &__list {
+  //   @extend %list;
+  //   @extend %flex;
+  // }
+  &__overlay {
+    position: relative;
+    z-index: 1;
+  }
+  &__specialty {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    margin: 0;
+    padding: 27px 0;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--hero-title);
+    background-color: var(--progects-title-bgc-color);
+  }
+
+  &__item {
+    width: calc((100% - 60px) / 3);
+  }
+
+  &__item + &__item {
+    margin-left: 30px;
+  }
+}
