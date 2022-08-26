@@ -1,6 +1,5 @@
 .features {
   &-list {
-    justify-content: center;
     gap: 30px;
   }
 
@@ -18,6 +17,7 @@
 
   &-list__icon {
     fill: var(--title-color);
+    text-align: center;
     padding: 25px 100px;
     margin-bottom: 30px;
     background-color: var(--features-bcg);

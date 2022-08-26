@@ -530,14 +530,13 @@ img {
 }
 @media screen and (min-width: 768px) {
   .hero__background {
-    min-width: 768px;
-    max-width: 1200px;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
   .hero__background {
-    min-width: 1200px;
     max-width: 1600px;
+    width: 100%;
     height: 600px;
     padding: 200px 0;
   }
@@ -564,7 +563,6 @@ img {
 }
 
 .features-list {
-  justify-content: center;
   gap: 30px;
 }
 .features-list__item {
@@ -582,6 +580,7 @@ img {
 }
 .features-list__icon {
   fill: var(--title-color);
+  text-align: center;
   padding: 25px 100px;
   margin-bottom: 30px;
   background-color: var(--features-bcg);
@@ -742,23 +741,26 @@ img {
 }
 .footer-flex {
   display: flex;
-  align-items: flex-start;
+  justify-content: center;
+  gap: 60px;
+}
+.footer .footer-adress {
+  text-align: center;
 }
 .footer__logo {
   display: inline-block;
   margin-bottom: 20px;
-  margin-right: 156px;
 }
 .footer__studio {
   color: var(--studio-footer);
 }
 
 .adress-list {
-  margin-right: 70px;
-  width: 231px;
+  text-align: center;
+  width: 232px;
 }
 .adress-list__item + .adress-list__item {
-  margin-top: 9px;
+  margin-top: 8px;
 }
 .adress-list__link {
   display: inline-block;
@@ -781,42 +783,42 @@ img {
 }
 
 .join {
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--hero-title);
-  margin-top: 12px;
   margin-bottom: 20px;
 }
 
 .subscribe {
   flex-grow: 2;
-  margin-left: 93px;
 }
 .subscribe .subsctibe__wrap {
   display: flex;
-  align-items: flex-end;
+  flex-wrap: wrap;
 }
 .subscribe__label {
   display: flex;
   flex-direction: column;
 }
 .subscribe__title {
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--hero-title);
-  margin-top: 12px;
   margin-bottom: 20px;
 }
 .subscribe__input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   margin: 0;
+  margin-bottom: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
@@ -836,11 +838,10 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 .subscribe__button {
+  text-align: left;
+  padding-left: 31px;
   position: relative;
   width: 200px;
-  margin-left: 12px;
-  padding-left: 28px;
-  text-align: left;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .subscribe__button::after {
