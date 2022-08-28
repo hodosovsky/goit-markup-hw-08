@@ -80,6 +80,9 @@
       color: var(--hover-color);
     }
   }
+  &__link--current {
+    color: var(--hover-color);
+  }
 }
 
 .menu-contacts {

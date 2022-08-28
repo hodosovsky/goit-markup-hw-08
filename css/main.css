@@ -223,6 +223,9 @@ img {
 .mobile-menu__link:hover, .mobile-menu__link:focus {
   color: var(--hover-color);
 }
+.mobile-menu__link--current {
+  color: var(--hover-color);
+}
 
 .menu-contacts {
   margin-top: auto;
