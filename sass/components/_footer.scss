@@ -7,11 +7,15 @@
     display: flex;
     justify-content: center;
     gap: 60px;
-
-    // align-items: flex-start;
+    @media screen and (min-width: 1200px) {
+      gap: 0;
+    }
   }
   .footer-adress {
     text-align: center;
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
   }
 
   &__logo {
@@ -31,7 +35,11 @@
   @extend %list;
   text-align: center;
   // margin-right: 70px;
-  width: 232px;
+  width: 231px;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+    margin-right: 70px;
+  }
 
   &__item + &__item {
     margin-top: 8px;
@@ -69,40 +77,61 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--hero-title);
-  // margin-top: 12px;
+  //
+  margin-top: 0;
   margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    margin-top: 12px;
+    text-align: left;
+  }
 }
 
 .subscribe {
   flex-grow: 2;
-  // margin-left: 93px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 
   .subsctibe__wrap {
-    display: flex;
-    flex-wrap: wrap;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__label {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+    text-align: center;
+    width: 100%;
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin-bottom: 0;
+    }
   }
 
   &__title {
-    text-align: center;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--hero-title);
-    // margin-top: 12px;
+    text-align: center;
     margin-bottom: 20px;
+
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+      margin-top: 12px;
+    }
   }
 
   &__input {
-    width: 450px;
     height: 50px;
-
+    max-width: 450px;
+    width: 100%;
     margin: 0;
     margin-bottom: 20px;
     padding-top: 15px;
@@ -116,6 +145,18 @@
     background-color: var(--hero-bcg);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
+    align-self: center;
+    @media screen and (min-width: 480px) {
+      width: 450px;
+    }
+
+    // @media screen and (min-width: 768px) {
+    //   width: 450px;
+    // }
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin-bottom: 0;
+    }
   }
 
   &__input::-webkit-input-placeholder {
@@ -127,14 +168,20 @@
 
   &__button {
     @extend .button;
+    display: block;
     text-align: left;
     padding-left: 31px;
     position: relative;
     width: 200px;
-    // margin-left: 12px;
-    // padding-left: 28px;
-    // text-align: left;
+    align-self: flex-end;
+    margin-bottom: 20px;
+
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 12px;
+      margin-bottom: 0;
+    }
   }
   &__button::after {
     position: absolute;

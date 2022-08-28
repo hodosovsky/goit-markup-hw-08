@@ -1,16 +1,21 @@
 .clients {
   &-list {
     @extend %list;
+    display: flex;
     justify-content: center;
+
     gap: 30px;
   }
 
-  &-item {
-    width: 100%;
-    width: calc((100% - 30px) / 2);
+  &__item {
+    width: 70%;
+    text-align: center;
+    @media screen and (min-width: 480px) {
+      width: calc((100% - 60px) / 2);
+    }
 
     @media screen and (min-width: 768px) {
-      width: calc((100% - 60px) / 3);
+      width: calc((100% - 90px) / 3);
     }
 
     @media screen and (min-width: 1200px) {
@@ -21,20 +26,31 @@
   &__link {
     @extend %link;
     display: block;
-    justify-content: center;
+
     width: 100%;
+    height: 92px;
     border: 1px solid var(--icons-color);
     border-radius: 4px;
-    padding: 16px 51px;
-    transform: border-color 250ms var(--default-transition);
+    padding: 16px 0;
+
     color: var(--icons-color);
-    transition: color 250ms var(--default-transition), border-color 250ms var(--default-transition);
+
+    transition: color 250ms var(--default-transition), border-color 250ms var(--default-transition),
+      border-color 250ms var(--default-transition), border-color 250ms var(--default-transition);
+
+    @media screen and (min-width: 480px) {
+      // width: 210px;
+      // width: calc((100% - 60px) / 2);
+      // width: 100%;
+      padding: 16px 52px;
+    }
+
     @media screen and (min-width: 768px) {
-      padding: 16px 59px;
+      padding: 16px 60px;
     }
 
     @media screen and (min-width: 1200px) {
-      padding: 16px 31px;
+      padding: 16px 32px;
     }
   }
   &__link:hover,

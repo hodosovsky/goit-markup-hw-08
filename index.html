@@ -20,15 +20,24 @@
   </head>
   <body>
     <!-- Хедер -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-container">
-        
-
         <nav class="navigation-wrap">
           <a href="./index.html" class="header__logo"
             >Web<span class="header__studio">Studio</span></a
           >
 
+          <button
+            type="button"
+            class="menu-button js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Перемикач мобільного меню"
+          >
+            <svg width="40" height="40">
+              <use class="menu" href="./images/icons.svg#menu"></use>
+            </svg>
+          </button>
           <ul class="navigation">
             <li class="navigation__item">
               <a href="./index.html" class="navigation__link navigation__link--current">Студія</a>
@@ -41,10 +50,75 @@
             </li>
           </ul>
         </nav>
+
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-toggle js-close-menu">
+            <svg width="40" height="40">
+              <use class="menu" href="./images/icons.svg#menu-close"></use>
+            </svg>
+          </button>
+          <div class="burger-menu">
+            <ul class="mobile-menu">
+              <li class="mobile-menu__item">
+                <a href="./index.html" class="mobile-menu__link">Студія</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a href="./portfolio.html" class="mobile-menu__link">Портфоліо</a>
+              </li>
+              <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Контакти</a></li>
+            </ul>
+            <ul class="menu-contacts">
+              <li class="menu-contacts__item">
+                <a href="tel:+380961111111" class="menu-contacts__tel">+38 096 111 11 11</a>
+              </li>
+              <li class="menu-contacts__item">
+                <a href="mailto:info@devstudio.com" class="menu-contacts__mail"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="menu-contacts__item">
+                <ul class="menu-social">
+                  <li class="menu-social__item>">
+                    <a
+                      href="https://www.instagram.com/"
+                      rel="noopener noreferer nofollow"
+                      class="menu-social__link"
+                      >Instagram</a
+                    >
+                  </li>
+                  <li class="menu-social__item>">
+                    <a
+                      href="https://www.twitter.com/"
+                      rel="noopener noreferer nofollow"
+                      class="menu-social__link"
+                      >Twitter</a
+                    >
+                  </li>
+                  <li class="menu-social__item>">
+                    <a
+                      href="https://www.facebook.com/"
+                      rel="noopener noreferer nofollow"
+                      class="menu-social__link"
+                      >Facebook</a
+                    >
+                  </li>
+                  <li class="menu-social__item>">
+                    <a
+                      href="https://www.linkedin.com/"
+                      rel="noopener noreferer nofollow"
+                      class="menu-social__link"
+                      >LinkedIn</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
         <ul class="contacts">
           <li class="contacts__item">
             <a href="mailto:info@devstudio.com" class="contacts__link"
-              ><svg class="contacts__icon" width="16px" height="12px">
+              ><svg class="contacts__icon" width="14px" height="10px">
                 <use href="./images/icons.svg#mail"></use>
               </svg>
               info@devstudio.com</a
@@ -52,14 +126,14 @@
           </li>
           <li class="contacts__item">
             <a href="tel:+380961111111" class="contacts__link"
-              ><svg class="contacts__icon" width="10px" height="16px">
+              ><svg class="contacts__icon" width="10px" height="14px">
                 <use href="./images/icons.svg#smartphone"></use></svg
               >+38 096 111 11 11</a
             >
           </li>
         </ul>
       </div>
-    </header> -->
+    </header>
     <main>
       <!-- Головний герой -->
       <section class="hero">
@@ -373,37 +447,37 @@
           <h2 class="title">Постійні клієнти</h2>
           <ul class="flex clients-list">
             <li class="clients__item">
-              <a href="#" class="clients__link link" aria-label="Перший клієнт"
+              <a href="#" class="clients__link" aria-label="Перший клієнт"
                 ><svg width="106px" height="60px" class="clients__icon">
                   <use href="./images/icons.svg#client-1"></use></svg
               ></a>
             </li>
             <li class="clients__item">
-              <a href="#" class="clients__link link" aria-label="Другий клієнт"
+              <a href="#" class="clients__link" aria-label="Другий клієнт"
                 ><svg width="106px" height="60px" class="clients__icon">
                   <use href="./images/icons.svg#client-2"></use></svg
               ></a>
             </li>
             <li class="clients__item">
-              <a href="#" class="clients__link link" aria-label="Третій клієнт"
+              <a href="#" class="clients__link" aria-label="Третій клієнт"
                 ><svg width="106px" height="60px" class="clients__icon">
                   <use href="./images/icons.svg#client-3"></use></svg
               ></a>
             </li>
             <li class="clients__item">
-              <a href="#" class="clients__link link" aria-label="Четвертий клієнт"
+              <a href="#" class="clients__link" aria-label="Четвертий клієнт"
                 ><svg width="106px" height="60px" class="clients__icon">
                   <use href="./images/icons.svg#client-4"></use></svg
               ></a>
             </li>
             <li class="clients__item">
-              <a href="#" class="clients__link link" aria-label="Пятий клієнт"
+              <a href="#" class="clients__link" aria-label="Пятий клієнт"
                 ><svg width="106px" height="60px" class="clients__icon">
                   <use href="./images/icons.svg#client-5"></use></svg
               ></a>
             </li>
             <li class="clients__item">
-              <a href="#" class="clients__link link" aria-label="Шостий клієнт"
+              <a href="#" class="clients__link" aria-label="Шостий клієнт"
                 ><svg width="106px" height="60px" class="clients__icon">
                   <use href="./images/icons.svg#client-6"></use></svg
               ></a>
@@ -490,7 +564,7 @@
           </ul>
         </div>
         <div class="subscribe">
-          <form>
+          <form class="footer-form">
             <div class="flex subsctibe__wrap">
               <label class="subscribe__label">
                 <span class="subscribe__title">Підпишіться на розсилку</span>
@@ -571,6 +645,7 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
     <script src="./js/body-padding.js"></script>
     <script src="./js/speaker-form.js"></script>
   </body>

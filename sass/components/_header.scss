@@ -15,21 +15,41 @@
 .header__logo {
   @extend %link;
   @extend %logo;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @media screen and (min-width: 768px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 .header__studio {
   color: var(--studio-header);
 }
 
 .navigation-wrap {
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and (min-width: 768px) {
+    justify-content: flex-start;
+    width: 0;
+  }
 }
 
 .navigation {
   @extend %list;
-  display: flex;
-  margin-left: 92px;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 87px;
+  }
 
   &__item + &__item {
     margin-left: 50px;
@@ -58,44 +78,66 @@
     &:focus {
       color: var(--hover-color);
     }
+
+    &--current {
+      position: relative;
+    }
+
+    &--current::after {
+      position: absolute;
+      content: '';
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--hover-color);
+      border-radius: 2px;
+    }
   }
-}
-
-.navigation__link--current {
-  position: relative;
-}
-
-.navigation__link--current::after {
-  position: absolute;
-  content: '';
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: var(--hover-color);
-  border-radius: 2px;
 }
 
 .contacts {
   @extend %list;
-  display: flex;
-  align-items: center;
-  margin-left: auto;
 
-  &__item + &__item {
-    margin-left: 50px;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    padding: 21px 0;
+    gap: 10px;
   }
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    margin-left: auto;
+    padding: 0;
+    gap: 30px;
+  }
+
+  // &__item + &__item {
+  //   margin-left: 50px;
+  // }
 
   &__link {
     @extend %link;
     display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
+
     align-items: center;
     font-weight: 500;
+    font-size: 12px;
+    line-height: calc(14 / 12);
     letter-spacing: 0.02em;
     color: var(--main-text-color);
     transition: color 250ms var(--default-transition);
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      font-size: 14px;
+      line-height: calc(16 / 14);
+    }
 
     &:hover,
     &:focus {
