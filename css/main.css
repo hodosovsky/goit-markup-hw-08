@@ -81,7 +81,6 @@ body {
 
 img {
   display: block;
-  width: 100%;
   max-width: 100%;
   height: auto;
   margin: 0 auto;
@@ -172,13 +171,13 @@ img {
 
 .menu-container {
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 48px 40px;
+  padding: 48px 25px;
   background-color: #ffffff;
-  z-index: 999;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 }
@@ -211,11 +210,6 @@ img {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 768px) {
-  .burger-menu {
-    display: none;
-  }
-}
 
 .mobile-menu__item + .mobile-menu__item {
   margin-top: 32px;
@@ -229,6 +223,11 @@ img {
   letter-spacing: 0.02em;
   color: #212121;
   transition: color 250ms var(--default-transition);
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu__link {
+    display: none;
+  }
 }
 .mobile-menu__link:hover, .mobile-menu__link:focus {
   color: var(--hover-color);
@@ -263,6 +262,7 @@ img {
 .menu-social {
   margin-top: 64px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
@@ -275,11 +275,7 @@ img {
 }
 
 .header {
-  position: fixed;
-  z-index: 2;
   width: 100%;
-  top: 0;
-  left: 0;
   background-color: var(--main-bcg-color);
   border-bottom: 1px solid var(--border-color);
 }
@@ -343,10 +339,6 @@ img {
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--title-color);
-  /* transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 1000ms; */
   transition: color 250ms var(--default-transition);
 }
 .navigation__link:hover, .navigation__link:focus {
@@ -724,33 +716,42 @@ img {
 }
 
 .hero__background {
-  width: 100%;
-  height: 400px;
-  margin: 0 auto;
   padding: 118px 0;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bcg.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mob/studio/header-mob.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  flex-grow: 1;
 }
 @media screen and (min-width: 480px) {
   .hero__background {
-    max-width: 768px;
-    width: 100%;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mob/studio/header-mob.jpg");
+  }
+}
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .hero__background {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mob/studio/header-mob@2x.jpg");
   }
 }
 @media screen and (min-width: 768px) {
   .hero__background {
-    max-width: 1600px;
-    width: 100%;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/studio/header-tablet.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero__background {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/studio/header-tablet@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
   .hero__background {
-    max-width: 1600px;
-    width: 100%;
-    height: 600px;
     padding: 200px 0;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/studio/header-desktop.jpg");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero__background {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/studio/header-desktop@2x.jpg");
   }
 }
 
@@ -1228,8 +1229,11 @@ img {
 .portfolio-overlay {
   position: relative;
   overflow: hidden;
-  /* width: 370px;
-  height: 294px; */
+}
+.portfolio__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .portfolio__item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -1242,9 +1246,6 @@ img {
   padding: 20px 24px;
   border: 1px solid var(--card-border);
   border-top: none;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
   flex-grow: 1;
 }
 
