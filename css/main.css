@@ -267,13 +267,14 @@ img {
 .menu-social__item {
   padding-left: 10px;
   padding-right: 10px;
-  border-left: 1px solid rgba(33, 33, 33, 0.2);
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 .menu-social__item:first-child {
   padding-left: 0;
 }
 .menu-social__item:last-child {
   padding-right: 0;
+  border-right: none;
 }
 .menu-social__link {
   font-weight: 500;
