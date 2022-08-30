@@ -263,6 +263,7 @@ img {
   margin-top: 64px;
   display: flex;
   flex-wrap: wrap;
+  row-gap: 20px;
 }
 .menu-social__item {
   padding: 0 10px;
