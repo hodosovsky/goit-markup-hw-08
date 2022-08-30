@@ -264,9 +264,16 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
-.menu-social__item + .menu-social__item {
+.menu-social__item {
+  padding-left: 10px;
   padding-right: 10px;
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+}
+.menu-social__item:first-child {
+  padding-left: 0;
+}
+.menu-social__item:last-child {
+  padding-right: 0;
 }
 .menu-social__link {
   font-weight: 500;
